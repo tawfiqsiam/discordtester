@@ -1,0 +1,21 @@
+{
+  "name": "new-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "steed montgomery",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "0.0.9",
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.1.0",
+    "fs": "0.0.1-security",
+    "mongoose": "^5.7.0",
+    "ms": "^2.1.2",
+    "node-fetch": "^2.6.0",
+    "superagent": "^5.1.0"
+  }
+}
