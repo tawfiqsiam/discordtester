@@ -7,8 +7,7 @@ module.exports = {
         
     let sicon = message.guild.iconURL;
     let serverembed = new Discord.RichEmbed()
-    .setDescription("random images"+
-    "random images  "+
+    .setDescription("random images\n"+
     "• whale | sends image of a whale \n"+
     "• bird | sends a random image of a bird\n"+
     "• cat | sends a random image of a cat\n"+
