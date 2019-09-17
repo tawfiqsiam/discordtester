@@ -8,7 +8,7 @@ const {
     description: "shows server info",
     run: async (client, message, args) => {
 
-        const res = await fetch("http://steedstestapi.glitch.me/img/killerwhale")
+        const res = await fetch("https://and-here-is-my-code.glitch.me/killerwhale")
         .then(res => res.json())
         .then(json => {
           return json
