@@ -9,24 +9,24 @@ module.exports = {
     let serverembed = new Discord.RichEmbed()
     .setDescription("random images"+
     "random images  "+
-    "• whale | sends image of a whale"+
-    "• bird | sends a random image of a bird"+
-    "• cat | sends a random image of a cat"+
-    "• dog | sends a random image of a dog "+
-    "• fox | sends a random image of a fox"+
-    "• koala | sends a random image of a koala"+
-    "• panda | sends a random image of a panda"+
-    "• hug | sends a random gif of a people hugging "+
-    "• meme | sends a random meme"+
-    " Other commands "+
-    "• 8ball | wana know an awnser ask away "+
-    "• serverinfo | Post info about the server"+
-    "• hug | sends a random gif of a people hugging "+
-    "• wink | sends a random gif of someone winking "+
-    "• pat | sends a random gif of someone pating "+
-    "admin commands"+
-    "• kick | kick a user "+
-    "• ban | ban a user "+
+    "• whale | sends image of a whale /n"+
+    "• bird | sends a random image of a bird/n"+
+    "• cat | sends a random image of a cat/n"+
+    "• dog | sends a random image of a dog /n"+
+    "• fox | sends a random image of a fox /n"+
+    "• koala | sends a random image of a koala /n"+
+    "• panda | sends a random image of a panda /n"+
+    "• hug | sends a random gif of a people hugging/n "+
+    "• meme | sends a random meme /n"+
+    " Other commands /n"+
+    "• 8ball | wana know an awnser ask away /n"+
+    "• serverinfo | Post info about the server /n"+
+    "• hug | sends a random gif of a people hugging /n"+
+    "• wink | sends a random gif of someone winking /n"+
+    "• pat | sends a random gif of someone pating /n"+
+    "admin commands/n"+
+    "• kick | kick a user /n"+
+    "• ban | ban a user /n"+
     "• purge | purge messages"
   );
 
