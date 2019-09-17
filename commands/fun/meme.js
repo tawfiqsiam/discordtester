@@ -8,7 +8,7 @@ const {
     description: "sends a random meme",
     run: async (client, message, args) => {
 
-        const res = await fetch("https://some-random-api.ml/meme")
+        const res = await fetch("https://steedstestapi.glitch.me/meme")
         .then(res => res.json())
         .then(json => {
           return json
@@ -22,7 +22,7 @@ const {
       const embed = new RichEmbed()
         .setColor("RANDOM")
         .setTitle(res.caption)
-        .setImage(res.image);
+        .setImage(res.Link);
         
       
       message.channel.send(embed);
