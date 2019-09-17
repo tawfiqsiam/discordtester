@@ -21,7 +21,6 @@ const {
   
       const embed = new RichEmbed()
         .setColor("RANDOM")
-        .setTitle(res.caption)
         .setImage(res.Link);
         
       
