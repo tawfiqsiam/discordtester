@@ -10,7 +10,11 @@ module.exports = {
     .setDescription("random images\n"+
     "• whale | sends image of a whale \n"+
     "• bird | sends a random image of a bird\n"+
-    "• cat | sends a random image of a cat\n"+
+    "• giraffe | sends a random image of a giraffe\n"+
+	"• elephant | sends a random image of a elephant\n"+
+	"• turtle | sends a random image of a turtle\n"+
+	"• killerwhale | sends a random image of a killerwhale\n"+
+    "• koala | sends a random image of a koala \n"+
     "• dog | sends a random image of a dog \n"+
     "• fox | sends a random image of a fox \n"+
     "• koala | sends a random image of a koala \n"+
@@ -32,7 +36,5 @@ module.exports = {
 
     message.channel.send(serverembed);
    
-
-}
 
 }
