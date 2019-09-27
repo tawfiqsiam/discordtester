@@ -1,24 +1,32 @@
 const {
-    richEmbed
-
-} = require("discord.js");
-const fetch = require("node-fetch");
-
-module.exports = {
-    name: "eevee",
-    description: "sends a image of eevee",
+    RichEmbed
+  } = require('discord.js');
+  const fetch = require("node-fetch");
+  
+  module.exports = {
+    name: "elephant",
+    description: "shows server info",
     run: async (client, message, args) => {
+
         const res = await fetch("https://and-here-is-my-code.glitch.me/img/eevee")
-        .THEN(RES => res.json())
+        .then(res => res.json())
         .then(json => {
-            return json
+          return json
         });
 
-        console.log(res);
-        const embed = new richEmbed()
+        
+       
+      
+      console.log(res);
+  
+      const embed = new RichEmbed()
         .setColor("RANDOM")
         .setImage(res.Link)
 
-        message.channel.send(embed);
-    }
+
+        
+      
+      message.channel.send(embed);
+      }
+
 }
