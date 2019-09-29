@@ -58,34 +58,9 @@ client.on("ready", () => {
 
 
 
-client.on('message', async message => {
-
-  let blacklisted = [`shit`,`nal`,`ass`,`assbang`,`assbanged`,`assbangs`,`asses`,`assfuck`,`assfucker`,`assh0le`,`asshat`,`assho1e`,`asshole`,`assholes`,`assmaster`,`assmunch`,`asswipe`,`asswipes`,`b1tch`,`bastard`,`bastards`,`beardedclam`,`beastiality`,`beatch`,`beeyotch`,`beotch`,`biatch`,`bigtits`,`bitch`,`bitched`,`bitches`,`bitchy`,`blowjob`,`blowjobs`,`bollock`,`bollocks`,`bollok`,`boner`,`boners`,`boob`,`boobies`,`boobs`,`booby`,`bukkake`,`bullshit`,`bullshits`,`bullshitted`,`bullturds`,`bung`,`busty`,`buttfuck`,`buttfucker`,`buttplug`,`c.0.c.k`,`c.o.c.k.`,`c.u.n.t,c0ck`,`c-0-c-k`,`caca,cahone`,`cameltoe`,`carpetmuncher`,`cawk`,`cervix`,`chinc`,`chincs`,`chink`,`chode`,`cl1t`,`climax`,`clit`,`clitoris`,`clitorus`,`clits`,`clitty`,`cocain`,`cocaine`,`cock`,`c-o-c-k`,`cockblock`,`cockholster`,`cockknocker`,`cocks`,`cocksmoker`,`cocksucker`,`corksucker`,`crackwhore`,`cum`,`cummin`,`cumming`,`cumshot`,`cumshots`,`cumslut`,`cumstain`,`cunilingus`,`cunnilingus`,`cunny`,`cunt`,`c-u-n-t`,`cuntface`,`cunthunter`,`cuntlick`,`cuntlicker`,`cunts`,`d1ck`,`d1ld0`,`d1ldo`,`dick`,`dickbag`,`dickdipper`,`dickface`,`dickflipper`,`dickhead`,`dickheads`,`dickish`,`dick-ish`,`dickripper`,`dicksipper`,`dickweed`,`dickwhipper`,`dickzipper`,`dike`,`dildo`,`dildos`,`dipship`,`doggie-style`,`doggy-style`,`dumass`,`dumbass`,`dumbasses`,`f.u.c.k`,`fuck`,`f-u-c-k`,`fuckass`,`fucked`,`fucker`,`fuckface`,`fuckin`,`fucking`,`fucknugget`,`fucknut`,`fuckoff`,`fucks`,`fucktard`,`fuck-tard`,`fuckup`,`fuckwad`,`fuckwit`,`fudgepacker`,`fuk`,`fvck`,`fxck`,`gtfo`,`handjob`,`j3rk0ff`,`jackass`,`jackhole`,`jackoff`,`jerk0ff`,`jerkoff`,`jism`,`jiz`,`jizm`,`jizz`,`jizzed`,`motherfucka`,`motherfucker`,`motherfucking`,`mtherfucker`,`mthrfucker`,`mthrfucking`,`muthafuckaz`,`muthafucker`,`mutherfucker`,`mutherfucking`,`muthrfucking`,`nazi`,`nazism`,`negro`,`nigga`,`niggah`,`niggas`,`niggaz`,`nigger`,`niggers`,`niggle`,`niglet`,`pissed`,`pissoff`,`piss-off`,`porn`,`porno`,`pussies`,`pussy`,`pussypounder`,`s.h.i.t.`,`sh1t`,`s-h-1-t`,`shamedame`,`s-h-i-t`,`shite`,`shiteater`,`shitface`,`shithead`,`shithole`,`shithouse`,`shits`,`shitt`,`shitted`,`shitter`,`shitty`,`shiz`,`slut`,`slutdumper`,`sluts`,`dicks`] 
 
 
-  let foundInText = false;
-  for (var i in blacklisted) { 
-    if (message.content.toLowerCase().includes(blacklisted[i].toLowerCase())) foundInText = true;
-  }
-  
-    if (foundInText) {
-      message.delete();
-      message.channel.sendMessage('Hey! No bad words!').then(msg => msg.delete(5000));
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -144,61 +119,7 @@ client.on("message", async message => {
     if (command) 
         command.run(client, message, args);
 
-        if(!coins[message.author.id]){
-          coins[message.author.id] = {
-            coins: 0
-          };
-        }    
 
-
-
-        let coinAmt = Math.floor(Math.random() * 10) + 1;
-        let baseAmt = Math.floor(Math.random() * 10) + 1;
-        console.log(`${coinAmt} ; ${baseAmt}`);
-      
-        if(coinAmt === baseAmt){
-          coins[message.author.id] = {
-            coins: coins[message.author.id].coins + coinAmt
-          };
-        fs.writeFile("./commands/currency/coins.json", JSON.stringify(coins), (err) => {
-          if (err) console.log(err)
-        });
-        let coinEmbed = new Discord.RichEmbed()
-        .setAuthor(message.author.username)
-        .setColor("#0000FF")
-        .addField("💸", `${coinAmt} coins added!`);
-      
-        message.channel.send(coinEmbed).then(msg => {msg.delete(5000)});
-        }
-
-        let xpAdd = Math.floor(Math.random() * 7) + 8;
-  console.log(xpAdd);
-
-  if(!xp[message.author.id]){
-    xp[message.author.id] = {
-      xp: 0,
-      level: 1
-    };
-  }
-
-
-  let curxp = xp[message.author.id].xp;
-  let curlvl = xp[message.author.id].level;
-  let nxtLvl = xp[message.author.id].level * 300;
-  xp[message.author.id].xp =  curxp + xpAdd;
-  if(nxtLvl <= xp[message.author.id].xp){
-    xp[message.author.id].level = curlvl + 1;
-    let lvlup = new Discord.RichEmbed()
-    .setTitle("Level Up!")
-    .setDescription(`New Level ${curlvl + 1}`)
-
- 
-
-    message.channel.send(lvlup)
-  }
-  fs.writeFile("./commands/levels/xp.json", JSON.stringify(xp), (err) => {
-    if(err) console.log(err)
-  });
 
 });
 
