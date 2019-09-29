@@ -11,8 +11,7 @@ const client = new Client({
 client.commands = new Collection();
 client.aliases = new Collection();
 
-let coins = require("./commands/currency/coins.json");
-let xp = require("./commands/levels/xp.json");
+
 
 config({
     path: __dirname + "/.env"
@@ -32,6 +31,7 @@ client.on("ready", () => {
     let statuses = [
       `server count ${client.guilds.size}!`,
       `!help for commands`,
+        `owner is AussieAdapt#5422`,
       `bot help server https://discord.gg/sBVDFT4`,
       `Over ${client.users.size} users!`
   
