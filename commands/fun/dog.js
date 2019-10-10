@@ -8,7 +8,7 @@ const {
     description: "shows server info",
     run: async (client, message, args) => {
 
-        const res = await fetch("https://dog.ceo/api/breeds/image/random")
+        const res = await fetch("https://and-here-is-my-code.glitch.me/dog")
         .then(res => res.json())
         .then(json => {
           return json
