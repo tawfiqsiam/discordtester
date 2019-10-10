@@ -13,18 +13,20 @@ const {
         .then(json => {
           return json
         });
+
+        
+       
       
       console.log(res);
-      
+  
       const embed = new RichEmbed()
         .setColor("RANDOM")
-        .setImage(res.link);
+        .setImage(res.Link)
+
+
+        
       
       message.channel.send(embed);
       }
 
 }
-
-
-
- 
