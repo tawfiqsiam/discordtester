@@ -8,7 +8,7 @@ const {
     description: "sends a random meme",
     run: async (client, message, args) => {
 
-        const res = await fetch("https://steedstestapi.glitch.me/meme")
+        const res = await fetch("https://and-here-is-my-code.glitch.me/meme")
         .then(res => res.json())
         .then(json => {
           return json
