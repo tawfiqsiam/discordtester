@@ -22,7 +22,7 @@ const {
       const embed = new RichEmbed()
         .setColor("RANDOM")
 
-        .setImage(res.image);
+        .setImage(res.Link);
         
       
       message.channel.send(embed);
