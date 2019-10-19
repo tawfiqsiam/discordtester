@@ -4,25 +4,32 @@ const {
   const fetch = require("node-fetch");
   
   module.exports = {
-    name: "cflip",
+    name: "coinflip",
     description: "shows server info",
     run: async (client, message, args) => {
-        let replies = ["heads", "tails"];
-        let result = Math.floor((Math.random() * replies.length));
-        const embed = new RichEmbed()
-        .setDescription(` ${replies[result]}`);
 
-        message.channel.send(embed);
+        const res = await fetch("http://and-here-is-my-code.glitch.me/coinflip")
+        .then(res => res.json())
+        .then(json => {
+          return json
+        });
 
-    
+        
+       
+      
+      console.log(res);
+  
+      const embed = new RichEmbed()
+        .setColor("RANDOM")
+        .setImage(res.Link)
 
 
-
-
+        
+      
+      message.channel.send(embed);
       }
 
 }
-
 
 
  
