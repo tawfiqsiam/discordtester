@@ -40,8 +40,8 @@ module.exports = {
   "• kick | kick a user \n"+
   "• report | report a user to the owner and get them gone\n"+
   "• ban | ban a user \n"+
-  "• purge | purge messages"
-    "my website  https://and-here-is-my-code.glitch.me\n"+
+  "• purge | purge messages"+
+    "my website  https://and-here-is-my-code.glitch.me\n"
   );
 
 
