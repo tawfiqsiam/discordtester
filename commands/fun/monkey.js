@@ -4,7 +4,7 @@ const {
   const fetch = require("node-fetch");
   
   module.exports = {
-    name: "bird",
+    name: "monkey",
     description: "shows server info",
     run: async (client, message, args) => {
 
