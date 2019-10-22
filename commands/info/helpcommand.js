@@ -20,6 +20,8 @@ module.exports = {
   "• fox | sends a random image of a fox \n"+
   "• koala | sends a random image of a koala \n"+
   "• panda | sends a random image of a panda \n"+
+   "• dolphin | sends a random image of a dolphin \n"+
+   "• bear | sends a random image of a bear \n"+     
   "• shark | sends image of a shark \n"+
   "• fish | sends image of a spider \n"+ 
   "• lizard | sends image of a lizard \n"+                  
